@@ -164,23 +164,21 @@ Card numbers, expiry, and CVV are validated for format only and are **never stor
 
 ## Screenshots
 
-*(Add screenshots to a `screenshots/` folder and reference them here before submission.)*
-
-- [ ] Home - Desktop
-- [ ] Home - Mobile
-- [ ] Restaurant Listing
-- [ ] Restaurant Menu
-- [ ] Product Details
-- [ ] Cart
-- [ ] Checkout
-- [ ] Order Confirmation
-- [ ] Order Tracking
-- [ ] User Account
-- [ ] Wishlist
-- [ ] Offers
-- [ ] Dark Mode
-- [ ] Contact Page
-- [ ] Mobile Navigation
+- [x] [Home - Desktop](images/Home%20-%20Desktop.png)
+- [x] [Home - Mobile](images/home%20-mobile.png)
+- [x] [Restaurant Listing](images/resturentListing.png)
+- [x] [Restaurant Menu](images/Restaurant%20Menu.png)
+- [x] [Product Details](images/productDetails.png)
+- [x] [Cart](images/Cart.png)
+- [x] [Checkout](images/checkout.png)
+- [x] [Order Confirmation](images/Order%20Confirmation.png)
+- [x] [Order Tracking](images/Order%20Tracking.png)
+- [x] [User Account](images/user%20Account.png)
+- [x] [Wishlist](images/wishlists.png)
+- [x] [Offers](images/offers.png)
+- [x] [Dark Mode](images/darkmode.png)
+- [x] [Contact Page](images/contactPage.png)
+- [x] [Mobile Navigation](images/mobile%20nav.png)
 
 ## Live Demo
 
