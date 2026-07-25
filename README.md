@@ -184,11 +184,11 @@ Card numbers, expiry, and CVV are validated for format only and are **never stor
 
 ## Live Demo
 
-*(Add your deployed URL here, e.g. GitHub Pages / Netlify / Vercel link.)*
+[https://maryan-123.github.io/freshbite-food-ordering/](https://maryan-123.github.io/freshbite-food-ordering/)
 
 ## Video Demo
 
-*(Add your YouTube demo link here.)*
+[https://youtu.be/sZ875CAGyPw](https://youtu.be/sZ875CAGyPw)
 
 ## Project Report
 
@@ -213,7 +213,10 @@ See [PROJECT-REPORT.md](PROJECT-REPORT.md) for the full written report.
 
 ## Author
 
-*(Add your name, contact details, and portfolio/GitHub links here.)*
+**Maryan Hussein Ulusow**
+
+- 📧 Email: [maryanhussein621@gmail.com](mailto:maryanhussein621@gmail.com)
+- 💻 GitHub: [Maryan-123](https://github.com/Maryan-123)
 
 ## Task Submission
 
