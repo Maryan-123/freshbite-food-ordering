@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Account | FreshBite</title>
+  <meta name="description" content="Manage your FreshBite profile, orders, addresses, wishlist, and reviews." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="header" id="header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-bowl-food"></i>
+        <span>Fresh<em>Bite</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="icon-btn cart-btn" aria-label="View cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+        <button class="btn btn-outline login-btn" aria-label="Login to your account">
+          <i class="fa-solid fa-user"></i> <span>Login</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-header">
+      <div class="container">
+        <h1>My Account</h1>
+        <p>Manage your profile, orders, addresses, wishlist, and reviews</p>
+      </div>
+    </section>
+
+    <section class="account-section">
+      <div class="container account-layout">
+
+        <!-- ===== Sidebar ===== -->
+        <nav class="account-sidebar" aria-label="Account navigation">
+          <button class="account-tab-btn active" data-tab="profile" type="button">
+            <i class="fa-solid fa-user"></i> Profile
+          </button>
+          <button class="account-tab-btn" data-tab="orders" type="button">
+            <i class="fa-solid fa-receipt"></i> Order History
+          </button>
+          <button class="account-tab-btn" data-tab="addresses" type="button">
+            <i class="fa-solid fa-location-dot"></i> Saved Addresses
+          </button>
+          <button class="account-tab-btn" data-tab="wishlist" type="button">
+            <i class="fa-solid fa-heart"></i> Wishlist
+          </button>
+          <button class="account-tab-btn" data-tab="reviews" type="button">
+            <i class="fa-solid fa-star"></i> Reviews
+          </button>
+          <button class="account-tab-btn" data-tab="settings" type="button">
+            <i class="fa-solid fa-gear"></i> Account Settings
+          </button>
+          <button class="account-tab-btn logout-tab-btn" id="accountLogoutBtn" type="button">
+            <i class="fa-solid fa-right-from-bracket"></i> Logout
+          </button>
+        </nav>
+
+        <!-- ===== Content ===== -->
+        <div class="account-content">
+
+          <!-- Profile -->
+          <div class="account-panel active" id="panel-profile">
+            <h2>Profile</h2>
+            <div class="profile-card">
+              <div class="profile-avatar">
+                <i class="fa-solid fa-circle-user"></i>
+              </div>
+              <form id="profileForm" novalidate>
+                <div class="form-field">
+                  <label for="profileName">Full Name</label>
+                  <input type="text" id="profileName" required />
+                  <span class="field-error" id="profileNameError"></span>
+                </div>
+                <div class="form-field">
+                  <label for="profileEmail">Email</label>
+                  <input type="email" id="profileEmail" required />
+                  <span class="field-error" id="profileEmailError"></span>
+                </div>
+                <div class="form-field">
+                  <label for="profilePhone">Phone Number</label>
+                  <input type="tel" id="profilePhone" required />
+                  <span class="field-error" id="profilePhoneError"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Order History -->
+          <div class="account-panel" id="panel-orders">
+            <h2>Order History</h2>
+            <div id="orderHistoryList"></div>
+          </div>
+
+          <!-- Saved Addresses -->
+          <div class="account-panel" id="panel-addresses">
+            <h2>Saved Addresses</h2>
+            <button class="btn btn-primary" id="addAddressBtn" type="button">
+              <i class="fa-solid fa-plus"></i> Add Address
+            </button>
+            <div id="addressList" class="address-list"></div>
+
+            <form id="addressForm" class="address-form" hidden novalidate>
+              <h3 id="addressFormTitle">Add Address</h3>
+              <input type="hidden" id="addressId" />
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="addrLabel">Label</label>
+                  <select id="addrLabel">
+                    <option value="Home">Home</option>
+                    <option value="Work">Work</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="addrStreet">Street / Building Name</label>
+                  <input type="text" id="addrStreet" required />
+                  <span class="field-error" id="addrStreetError"></span>
+                </div>
+                <div class="form-field">
+                  <label for="addrApartment">Apartment / House Number</label>
+                  <input type="text" id="addrApartment" />
+                </div>
+                <div class="form-field">
+                  <label for="addrArea">Area / District</label>
+                  <input type="text" id="addrArea" required />
+                  <span class="field-error" id="addrAreaError"></span>
+                </div>
+                <div class="form-field">
+                  <label for="addrCity">City</label>
+                  <input type="text" id="addrCity" required />
+                  <span class="field-error" id="addrCityError"></span>
+                </div>
+                <div class="form-field form-field-wide">
+                  <label for="addrInstructions">Delivery Instructions</label>
+                  <textarea id="addrInstructions" rows="2"></textarea>
+                </div>
+              </div>
+              <label class="checkbox-label">
+                <input type="checkbox" id="addrIsDefault" />
+                Set as default address
+              </label>
+              <div class="address-form-actions">
+                <button type="button" class="btn btn-outline" id="cancelAddressBtn">Cancel</button>
+                <button type="submit" class="btn btn-primary">Save Address</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Wishlist -->
+          <div class="account-panel" id="panel-wishlist">
+            <h2>Wishlist</h2>
+            <div class="food-grid" id="wishlistGrid"></div>
+          </div>
+
+          <!-- Reviews -->
+          <div class="account-panel" id="panel-reviews">
+            <h2>My Reviews</h2>
+            <div id="myReviewsList"></div>
+          </div>
+
+          <!-- Account Settings -->
+          <div class="account-panel" id="panel-settings">
+            <h2>Account Settings</h2>
+            <div class="settings-card">
+              <p>You are currently logged in as <strong id="settingsEmail"></strong>.</p>
+              <p class="simulation-notice">
+                <i class="fa-solid fa-shield-halved"></i>
+                This account system is fully simulated for a learning project. Data lives only in this
+                browser's local storage - nothing is sent to a server.
+              </p>
+              <button class="btn btn-outline" id="settingsLogoutBtn" type="button">
+                <i class="fa-solid fa-right-from-bracket"></i> Logout of FreshBite
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container footer-container">
+      <div class="footer-col footer-about">
+        <a href="index.html" class="logo footer-logo">
+          <i class="fa-solid fa-bowl-food"></i>
+          <span>Fresh<em>Bite</em></span>
+        </a>
+        <p>Your favorite food, delivered fast and fresh.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="restaurants.html">Restaurants</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> 123 Main Street, Mogadishu, Somalia</li>
+          <li><i class="fa-solid fa-phone"></i> +252 61 234 5678</li>
+          <li><i class="fa-solid fa-envelope"></i> support@freshbite.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> FreshBite. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Modal: restaurant conflict (used by reorder) -->
+  <div class="modal-overlay" id="conflictModal">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="conflictModalTitle">
+      <i class="fa-solid fa-triangle-exclamation modal-icon"></i>
+      <h3 id="conflictModalTitle">Start a New Order?</h3>
+      <p>Your cart contains food from another restaurant. Starting a new order will clear your current cart.</p>
+      <div class="modal-actions">
+        <button class="btn btn-outline" id="modalCancelBtn" type="button">Cancel</button>
+        <button class="btn btn-primary" id="modalConfirmBtn" type="button">Start New Order</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/orders.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/global-search.js"></script>
+  <script src="js/extras.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/account.js"></script>
+</body>
+</html>

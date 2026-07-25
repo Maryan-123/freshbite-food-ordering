@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu | FreshBite</title>
+  <meta name="description" content="Browse a restaurant's full menu on FreshBite." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ===== Header / Navigation ===== -->
+  <header class="header" id="header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-bowl-food"></i>
+        <span>Fresh<em>Bite</em></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+        <li><a href="menu.html" class="nav-link active">Menu</a></li>
+        <li><a href="offers.html" class="nav-link">Offers</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="cart.html" class="icon-btn cart-btn" aria-label="View cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+        <button class="btn btn-outline login-btn" aria-label="Login to your account">
+          <i class="fa-solid fa-user"></i> <span>Login</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ===== Restaurant Header (populated by js/menu.js) ===== -->
+    <section class="restaurant-header" id="restaurantHeader">
+      <!-- Injected dynamically -->
+    </section>
+
+    <!-- ===== Menu Filters ===== -->
+    <section class="filters-section">
+      <div class="container">
+        <div class="filters-bar">
+          <div class="filter-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="menuSearch" placeholder="Search this menu..." aria-label="Search menu items" />
+          </div>
+
+          <button class="filter-toggle-btn" id="filterToggleBtn" type="button" aria-expanded="false" aria-controls="filterPanel">
+            <i class="fa-solid fa-sliders"></i> Filters
+          </button>
+        </div>
+
+        <div class="filter-panel" id="filterPanel">
+          <div class="filter-group">
+            <label for="categoryFilter">Category</label>
+            <select id="categoryFilter">
+              <option value="all">All Categories</option>
+            </select>
+          </div>
+
+          <div class="filter-group filter-checkboxes">
+            <label class="checkbox-label">
+              <input type="checkbox" class="dietary-checkbox" value="Vegetarian" />
+              Vegetarian
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="dietary-checkbox" value="Vegan" />
+              Vegan
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="dietary-checkbox" value="Non-Vegetarian" />
+              Non-Vegetarian
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="dietary-checkbox" value="Gluten-Free" />
+              Gluten-Free
+            </label>
+          </div>
+
+          <div class="filter-group">
+            <label for="menuSortSelect">Sort By</label>
+            <select id="menuSortSelect">
+              <option value="default">Recommended</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating-desc">Rating: High to Low</option>
+            </select>
+          </div>
+
+          <button class="btn btn-outline clear-filters-btn" id="clearFiltersBtn" type="button">
+            <i class="fa-solid fa-rotate-left"></i> Clear All Filters
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Food Results ===== -->
+    <section class="menu-results">
+      <div class="container">
+        <p class="results-count" id="resultsCount"></p>
+        <div class="food-grid" id="foodGrid">
+          <!-- Injected by js/menu.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Restaurant Reviews ===== -->
+    <section class="reviews-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Customer Reviews</h2>
+          <p class="reviews-summary" id="reviewsSummary"></p>
+        </div>
+        <div class="reviews-list" id="reviewsList">
+          <!-- Injected by js/reviews.js -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="contact">
+    <div class="container footer-container">
+
+      <div class="footer-col footer-about">
+        <a href="index.html" class="logo footer-logo">
+          <i class="fa-solid fa-bowl-food"></i>
+          <span>Fresh<em>Bite</em></span>
+        </a>
+        <p>Your favorite food, delivered fast and fresh. FreshBite brings the best local restaurants right to your doorstep.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="restaurants.html">Restaurants</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> 123 Main Street, Mogadishu, Somalia</li>
+          <li><i class="fa-solid fa-phone"></i> +252 61 234 5678</li>
+          <li><i class="fa-solid fa-envelope"></i> support@freshbite.com</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Newsletter</h3>
+        <p>Subscribe to get the latest offers and updates.</p>
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" aria-label="Email address" required />
+          <button type="submit" aria-label="Subscribe to newsletter"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+        <p class="form-message" id="newsletterMessage" role="status"></p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> FreshBite. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Modal: restaurant conflict -->
+  <div class="modal-overlay" id="conflictModal">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="conflictModalTitle">
+      <i class="fa-solid fa-triangle-exclamation modal-icon"></i>
+      <h3 id="conflictModalTitle">Start a New Order?</h3>
+      <p>Your cart contains food from another restaurant. Starting a new order will clear your current cart.</p>
+      <div class="modal-actions">
+        <button class="btn btn-outline" id="modalCancelBtn" type="button">Cancel</button>
+        <button class="btn btn-primary" id="modalConfirmBtn" type="button">Start New Order</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/global-search.js"></script>
+  <script src="js/extras.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | FreshBite</title>
+  <meta name="description" content="Learn about FreshBite's story, mission, team, and restaurant partners." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="header" id="header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-bowl-food"></i>
+        <span>Fresh<em>Bite</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="offers.html" class="nav-link">Offers</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="icon-btn cart-btn" aria-label="View cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+        <button class="btn btn-outline login-btn" aria-label="Login to your account">
+          <i class="fa-solid fa-user"></i> <span>Login</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ===== Hero / Story ===== -->
+    <section class="about-hero">
+      <div class="container about-hero-container">
+        <span class="hero-badge"><i class="fa-solid fa-heart"></i> Our Story</span>
+        <h1>Bringing Somalia's Best Food to Your Doorstep</h1>
+        <p>
+          FreshBite started in 2021 with a simple idea: everyone deserves access to great local food without the wait.
+          What began as a small delivery team working with five restaurants in Mogadishu has grown into a platform
+          connecting thousands of hungry customers with the flavors they love - from family-run Somali kitchens to
+          modern international cuisine.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Mission / Vision / Values ===== -->
+    <section class="mvv-section">
+      <div class="container mvv-grid">
+        <div class="mvv-card">
+          <i class="fa-solid fa-bullseye"></i>
+          <h3>Our Mission</h3>
+          <p>Make ordering great food simple, fast, and reliable for every customer and every restaurant partner we work with.</p>
+        </div>
+        <div class="mvv-card">
+          <i class="fa-solid fa-eye"></i>
+          <h3>Our Vision</h3>
+          <p>To become the most trusted food-delivery platform in East Africa, championing local restaurants and home-grown flavors.</p>
+        </div>
+        <div class="mvv-card">
+          <i class="fa-solid fa-hands-holding-circle"></i>
+          <h3>Our Values</h3>
+          <p>Freshness, fairness to our restaurant partners, respect for our delivery riders, and honest, transparent pricing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== How It Works ===== -->
+    <section class="how-it-works-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>How FreshBite Works</h2>
+          <p>Getting your favorite meal delivered takes just a few taps</p>
+        </div>
+        <div class="how-it-works-grid">
+          <div class="how-step">
+            <span class="how-step-number">1</span>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h3>Browse</h3>
+            <p>Explore restaurants and dishes near you, filtered by cuisine, rating, or dietary needs.</p>
+          </div>
+          <div class="how-step">
+            <span class="how-step-number">2</span>
+            <i class="fa-solid fa-cart-plus"></i>
+            <h3>Order</h3>
+            <p>Customize your dish, add it to your cart, and apply a coupon if you have one.</p>
+          </div>
+          <div class="how-step">
+            <span class="how-step-number">3</span>
+            <i class="fa-solid fa-credit-card"></i>
+            <h3>Checkout</h3>
+            <p>Choose a delivery time and a payment method that works for you.</p>
+          </div>
+          <div class="how-step">
+            <span class="how-step-number">4</span>
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>Track &amp; Enjoy</h3>
+            <p>Watch your order move from the kitchen to your door, then dig in!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Statistics (animated counters) ===== -->
+    <section class="stats-section">
+      <div class="container stats-grid">
+        <div class="stat-block">
+          <span class="stat-counter" data-target="500" data-suffix="+">0</span>
+          <p>Restaurant Partners</p>
+        </div>
+        <div class="stat-block">
+          <span class="stat-counter" data-target="50000" data-suffix="+">0</span>
+          <p>Happy Customers</p>
+        </div>
+        <div class="stat-block">
+          <span class="stat-counter" data-target="30" data-suffix="+">0</span>
+          <p>Cities Covered</p>
+        </div>
+        <div class="stat-block">
+          <span class="stat-counter" data-target="250000" data-suffix="+">0</span>
+          <p>Orders Delivered</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Team ===== -->
+    <section class="team-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Meet the Team</h2>
+          <p>The people behind FreshBite (fictional profiles for this project)</p>
+        </div>
+        <div class="team-grid">
+          <div class="team-card">
+            <i class="fa-solid fa-circle-user team-avatar"></i>
+            <h3>Ayaan Mohamed</h3>
+            <span>Founder &amp; CEO</span>
+            <p>Started FreshBite after seeing how hard it was for local restaurants to reach new customers online.</p>
+          </div>
+          <div class="team-card">
+            <i class="fa-solid fa-circle-user team-avatar"></i>
+            <h3>Yusuf Abdi</h3>
+            <span>Head of Operations</span>
+            <p>Keeps every delivery running on time, working closely with our rider network across the city.</p>
+          </div>
+          <div class="team-card">
+            <i class="fa-solid fa-circle-user team-avatar"></i>
+            <h3>Ifrah Warsame</h3>
+            <span>Product Designer</span>
+            <p>Designs the FreshBite experience to feel warm, fast, and easy for every customer.</p>
+          </div>
+          <div class="team-card">
+            <i class="fa-solid fa-circle-user team-avatar"></i>
+            <h3>Hassan Nur</h3>
+            <span>Partnerships Lead</span>
+            <p>Works directly with restaurant owners to bring new menus and cuisines onto the platform.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Restaurant Partners ===== -->
+    <section class="partners-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Restaurant Partners</h2>
+          <p>A growing family of local kitchens, from home-style Somali cooking to global cuisine</p>
+        </div>
+        <div class="partners-logos" id="partnersLogos"></div>
+      </div>
+    </section>
+
+    <!-- ===== Awards ===== -->
+    <section class="awards-section">
+      <div class="container awards-grid">
+        <div class="award-card">
+          <i class="fa-solid fa-trophy"></i>
+          <h3>Best New App 2024</h3>
+          <p>East Africa Tech Awards</p>
+        </div>
+        <div class="award-card">
+          <i class="fa-solid fa-medal"></i>
+          <h3>Top Delivery Experience</h3>
+          <p>Somali Digital Business Awards</p>
+        </div>
+        <div class="award-card">
+          <i class="fa-solid fa-star"></i>
+          <h3>4.8/5 Customer Rating</h3>
+          <p>Based on 50,000+ simulated reviews</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonials ===== -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>What Our Customers Say</h2>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"FreshBite makes it so easy to order from my favorite Somali restaurant. Delivery is always fast and the food arrives hot."</p>
+            <strong>- Zainab H.</strong>
+          </div>
+          <div class="testimonial-card">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"I love the coupon system - I always find a good deal before checking out. Customer support was quick to help too."</p>
+            <strong>- Ibrahim W.</strong>
+          </div>
+          <div class="testimonial-card">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+            <p>"Great variety of restaurants and the order tracking keeps me updated the whole way. Highly recommend!"</p>
+            <strong>- Faduma A.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="app-promo">
+      <div class="container app-promo-container">
+        <div class="app-promo-content">
+          <h2>Ready to Taste FreshBite?</h2>
+          <p>Browse restaurants near you and get your favorite meal delivered fresh, fast, and hassle-free.</p>
+          <a href="restaurants.html" class="btn btn-light">
+            <i class="fa-solid fa-utensils"></i> Browse Restaurants
+          </a>
+        </div>
+        <div class="app-promo-icon">
+          <i class="fa-solid fa-bowl-food"></i>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container footer-container">
+      <div class="footer-col footer-about">
+        <a href="index.html" class="logo footer-logo">
+          <i class="fa-solid fa-bowl-food"></i>
+          <span>Fresh<em>Bite</em></span>
+        </a>
+        <p>Your favorite food, delivered fast and fresh.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="restaurants.html">Restaurants</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> 123 Main Street, Mogadishu, Somalia</li>
+          <li><i class="fa-solid fa-phone"></i> +252 61 234 5678</li>
+          <li><i class="fa-solid fa-envelope"></i> support@freshbite.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> FreshBite. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/global-search.js"></script>
+  <script src="js/extras.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Confirmed | FreshBite</title>
+  <meta name="description" content="Your FreshBite order has been placed successfully." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="header" id="header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-bowl-food"></i>
+        <span>Fresh<em>Bite</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="icon-btn cart-btn" aria-label="View cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+        <button class="btn btn-outline login-btn" aria-label="Login to your account">
+          <i class="fa-solid fa-user"></i> <span>Login</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="confirmation-section">
+      <div class="container">
+        <div id="noOrderState" class="no-results" hidden>
+          <i class="fa-solid fa-receipt"></i>
+          <h3>No recent order found</h3>
+          <p>Place an order first to see your confirmation here.</p>
+          <a href="restaurants.html" class="btn btn-primary">Browse Restaurants</a>
+        </div>
+
+        <div class="confirmation-card" id="confirmationCard">
+          <div class="confirmation-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <h1>Order Placed Successfully!</h1>
+          <p class="confirmation-subtext">Thank you for ordering with FreshBite. Your food is on its way.</p>
+
+          <div class="confirmation-order-number">
+            Order Number: <strong id="confOrderId"></strong>
+          </div>
+
+          <div class="confirmation-details-grid">
+            <div class="confirmation-detail">
+              <span class="detail-label"><i class="fa-solid fa-store"></i> Restaurant</span>
+              <span class="detail-value" id="confRestaurant"></span>
+            </div>
+            <div class="confirmation-detail">
+              <span class="detail-label"><i class="fa-solid fa-location-dot"></i> Delivery Address</span>
+              <span class="detail-value" id="confAddress"></span>
+            </div>
+            <div class="confirmation-detail">
+              <span class="detail-label"><i class="fa-solid fa-credit-card"></i> Payment Method</span>
+              <span class="detail-value" id="confPayment"></span>
+            </div>
+            <div class="confirmation-detail">
+              <span class="detail-label"><i class="fa-solid fa-clock"></i> Estimated Delivery</span>
+              <span class="detail-value" id="confEta"></span>
+            </div>
+          </div>
+
+          <div class="confirmation-items">
+            <h2>Ordered Items</h2>
+            <div id="confItemsList"></div>
+            <div class="summary-row summary-total">
+              <span>Total</span>
+              <span id="confTotal">$0.00</span>
+            </div>
+          </div>
+
+          <div class="confirmation-actions">
+            <a href="order-tracking.html" class="btn btn-primary" id="trackOrderBtn">
+              <i class="fa-solid fa-truck-fast"></i> Track Order
+            </a>
+            <a href="account.html#orders" class="btn btn-outline">
+              <i class="fa-solid fa-receipt"></i> View Order History
+            </a>
+            <a href="restaurants.html" class="btn btn-outline">
+              <i class="fa-solid fa-utensils"></i> Continue Shopping
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> FreshBite. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/orders.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/global-search.js"></script>
+  <script src="js/extras.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>
