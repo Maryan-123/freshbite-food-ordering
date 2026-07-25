@@ -6,7 +6,7 @@ A full-featured, frontend-only food ordering web application built with **HTML5,
 
 - **Project**: FreshBite Online Food Ordering Website
 - **Track**: Frontend Web Development Internship
-- **Student Code**: *(add your assigned student/intern code here)*
+- **Student Code**: DAS003756
 - **Submission stage**: Final stage - full simulated e-commerce food-ordering experience
 
 > **Important disclaimer:** FreshBite is an educational simulation. Authentication, payments, delivery tracking, and notifications are all simulated on the client and stored in the browser's `localStorage`. Nothing here should be treated as a production-ready or secure system.
@@ -218,4 +218,4 @@ See [PROJECT-REPORT.md](PROJECT-REPORT.md) for the full written report.
 
 ## Task Submission
 
-*(Add your internship task submission link here.)*
+[https://www.freeinternships.in/student/my_tasks.php](https://www.freeinternships.in/student/my_tasks.php)
